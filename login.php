@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['username'])){
+	header('location:login.php');
+}else{
+	header('location:admin.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,9 +30,7 @@
 	</p>
 		 <p>Password: <input name="password" type="password" value="" class="input-field">
 	</p>
-		<p><input type="checkbox" name="remember" /> Remember me
-	</p>
-		<p><button><a href="admin.php">LOGIN</button></p>
+		<p><button><a href="admin.php" name="remember">LOGIN</button></p>
 		
 </form>
 </body>
