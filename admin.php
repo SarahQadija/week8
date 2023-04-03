@@ -10,8 +10,8 @@
     <h1>ANDA ADALAH ADMIN</h1>
 
     <form action="" method="post">
-        <button type="submit" >LOGOUT</button>
-        <button type="submit" href="index.php">BACK</button>
+        <button><a href="logout.php">LOGOUT</button>
+        <button><a href="index.php">BACK</button>
 </form>
 </body>
 </html>
