@@ -18,7 +18,7 @@
 * Source: www.TutorialsClass.com
 **/
 ?>
-<form action="page2.php" method="post" style="border: 2px dotted blue; text-align:center; width: 400px;">
+<form action="admin.php" method="post" style="border: 2px dotted blue; text-align:center; width: 400px;">
 	<p>
 		Username: <input name="username" type="text" value="<?php if(isset($_COOKIE["username"])) { echo $_COOKIE["username"]; } ?>" class="input-field">
 	</p>
