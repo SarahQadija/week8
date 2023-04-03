@@ -1,17 +1,3 @@
-<?php
-/**
-* Website: www.TutorialsClass.com
-**/
-session_start();
-
-if(!empty($_POST["login"])) {
-    header ('location: admin.php?');
-} else {
-	header ('location: login.php?');
-}
-?>
-<p><a href="login.php"> Go to Login Page </a> </p>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +23,8 @@ if(!empty($_POST["login"])) {
 	</p>
 		<p><input type="checkbox" name="remember" /> Remember me
 	</p>
-		<p><input type="submit" value="Login"></span></p>
+		<p><button><a href="login.php">LOGIN</button></p>
+		
 </form>
 </body>
 
