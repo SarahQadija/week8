@@ -1,17 +1,3 @@
-<?php
-/**
-* Website: www.TutorialsClass.com
-**/
-session_start();
-
-if(!empty($_POST["remember"])) {
-    header ('location: admin.php?');
-} else {
-	header ('location: login.php?');
-}
-?>
-<p><a href="login.php"> Go to Login Page </a> </p>
-
 <!DOCTYPE html>
 <html lang="en">
 
