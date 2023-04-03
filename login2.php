@@ -1,25 +1,14 @@
 <?php
-session_start();
-
-$username = $_SESSION['username'];
-$password = $_SESSION['password'];
-
-
-if ($username == 'admin' && $password == 'admin') {
-    if (!empty($_POST["remember"])) {
-        setcookie("username", $_POST["username"], time() + 30);
-        setcookie("password", $_POST["password"], time() + 30);
-        echo "Cookies Set Successfuly";
-    } else {
-        setcookie("username", "");
-        setcookie("password", "");
-        echo "Cookies Not Set";
-    }
+if (!isset($_COOKIE['Donelogin']) || $_COOKIE['Donelogin'] != true) {
+    header('Location: login.php');
+    exit;
 } else {
-?>
-    <script>
-        alert('Maaf, kata laluan salah');
-        window.location = './';
-    </script>
-<?php
+    if (time() > $_COOKIE['expire']) {
+        header('Location: logout.php');
+        exit;
+    } else {
+        setcookie('expire', $_COOKIE['expire'], time()+30);
+    }
 }
+?>
+

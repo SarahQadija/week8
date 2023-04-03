@@ -9,7 +9,7 @@
 <body>
     <h1>ANDA ADALAH ADMIN</h1>
 
-    <form action="" method="post">
+    <form>
         <button><a href="logout.php">LOGOUT</button>
         <button><a href="index.php">BACK</button>
 </form>
