@@ -1,6 +1,17 @@
 <?php
+/**
+* Website: www.TutorialsClass.com
+**/
+session_start();
 
+if(!empty($_POST["login"])) {
+    header ('location: admin.php?');
+} else {
+	header ('location: login.php?');
+}
 ?>
+<p><a href="login.php"> Go to Login Page </a> </p>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,9 +31,9 @@
 ?>
 <form action="admin.php" method="post" style="border: 2px dotted blue; text-align:center; width: 400px;">
 	<p>
-		Username: <input name="username" type="text" value="<?php if(isset($_COOKIE["username"])) { echo $_COOKIE["username"]; } ?>" class="input-field">
+		Username: <input name="username" type="text" value="" class="input-field">
 	</p>
-		 <p>Password: <input name="password" type="password" value="<?php if(isset($_COOKIE["password"])) { echo $_COOKIE["password"]; } ?>" class="input-field">
+		 <p>Password: <input name="password" type="password" value="" class="input-field">
 	</p>
 		<p><input type="checkbox" name="remember" /> Remember me
 	</p>

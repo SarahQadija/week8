@@ -1,18 +1,13 @@
 <?php
-/**
-* Website: www.TutorialsClass.com
-**/
+
+session_start();
 
 if(!empty($_POST["remember"])) {
-	setcookie ("username",$_POST["username"],time()+ 3600);
-	setcookie ("password",$_POST["password"],time()+ 3600);
+	setcookie ("username",$_POST["username"],time()+ 30);
+	setcookie ("password",$_POST["password"],time()+ 30);
 	echo "Cookies Set Successfuly";
 } else {
 	setcookie("username","");
 	setcookie("password","");
 	echo "Cookies Not Set";
 }
-
-?>
-
-<p><a href="login.php"> Go to Login Page </a> </p>
